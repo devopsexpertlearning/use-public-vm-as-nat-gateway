@@ -39,10 +39,11 @@ sudo ip6tables -A FORWARD -i ens3 -j ACCEPT
 sudo ip6tables -A FORWARD -o ens3 -j ACCEPT
 
 #Run this below commands in both VM
-sudo iptables -I INPUT 1 -p tcp --dport 80 -j ACCEPT
+sudo iptables -I INPUT 1 -p tcp --dport 22 -j ACCEPT
 sudo iptables -I INPUT 2 -p tcp --dport 443 -j ACCEPT
 sudo iptables -I INPUT 3 -p tcp --dport 5678 -j ACCEPT
 sudo iptables -I INPUT 4 -p tcp --dport 8080 -j ACCEPT
+sudo iptables -I INPUT 5 -p tcp --dport 80 -j ACCEPT
 
 
 #save rules
